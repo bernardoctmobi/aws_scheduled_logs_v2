@@ -21,4 +21,4 @@ Resources:
           Type: Schedule
           Properties:
             # Schedule: rate(5 minutes)
-            Schedule: cron(0/1 * * * ? *)
+            Schedule: cron(0/5 * * * ? *)
