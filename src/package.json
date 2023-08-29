@@ -1,0 +1,8 @@
+{
+    "name": "5_min_log",
+    "version": "1.0.0",
+    "main": "app.js",
+    "author": "SAM CLI",
+    "license": "MIT",
+    "dependencies": {}
+}

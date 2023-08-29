@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Cron
+
+Globals:
+  Function:
+    Timeout: 3
+
+Resources:
+  LogFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.handler
+      Runtime: nodejs18.x
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        ScheduledEvent:
+          Type: Schedule
+          Properties:
+            Schedule: rate(5 minutes)
