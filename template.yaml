@@ -20,4 +20,5 @@ Resources:
         ScheduledEvent:
           Type: Schedule
           Properties:
-            Schedule: rate(5 minutes)
+            # Schedule: rate(5 minutes)
+            Schedule: cron(0/1 * * * ? *)
